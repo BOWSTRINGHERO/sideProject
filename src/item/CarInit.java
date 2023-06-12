@@ -1,0 +1,79 @@
+package item;
+
+import java.awt.print.Book;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+public class CarInit {
+    private static ArrayList<Book> mCarList;
+    private static int mTotalCar = 0;
+
+    public static void init() {
+        mTotalCar = totalFileToCarList();
+        mCarList = new ArrayList<Book>();
+        setFileToCarList(mCarList);
+    }
+
+    public static int totalFileToCarList() {
+        try {
+            FileReader fr = new FileReader("Car.txt");
+            BufferedReader reader = new BufferedReader(fr);
+            String str;
+            int num = 0;
+            while ((str = reader.readLine()) != null) {
+                if (str.contains("ITEM")) {
+                    ++num;
+                }
+            }
+            reader.close();
+            fr.close();
+            return num;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return 0;
+    }
+
+    public static void setFileToCarList(ArrayList<Book> carList) {
+        try {
+            FileReader fr = new FileReader("car.txt");
+            BufferedReader reader = new BufferedReader(fr);
+            String str2;
+            String[] readCar = new String[7];
+            while ((str2 = reader.readLine()) != null) {
+                if (str2.contains("ITEM")) {
+                    readCar[0] = str2;
+                    readCar[1] = reader.readLine();
+                    readCar[2] = reader.readLine();
+                    readCar[3] = reader.readLine();
+                    readCar[4] = reader.readLine();
+                    readCar[5] = reader.readLine();
+                    readCar[6] = reader.readLine();
+                }
+                Book caritem = new Book(readCar[0], readCar[1], readCar[2], readCar[3], readCar[4], readCar[5], readCar[6]);
+                carList.add(caritem);
+            }
+            reader.close();
+            fr.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public static ArrayList<Book> getmCarList() {
+        return mCarList;
+    }
+
+    public static void setmCarList(ArrayList<Book> mCarList) {
+        CarInit.mCarList = mCarList;
+    }
+
+    public static int getmTotalCar() {
+        return mTotalCar;
+    }
+
+    public static void setmTotalCar(int mTotalCar) {
+        CarInit.mTotalCar = mTotalCar;
+    }
+}
