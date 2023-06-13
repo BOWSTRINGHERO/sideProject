@@ -1,27 +1,28 @@
 package item;
 
-public class Car extends CarInit {
+public abstract class Car extends Item {
     private String producer;
     private String description;
     private String category;
     private String releaseDate;
+
     public Car(String carId, String name, int unitPrice) {
         super(carId, name, unitPrice);
     }
 
-    public Car(String carId, String name, int unitPrice, String producer, String decscription, String category, String releaseDate) {
+    public Car(String carId, String name, int unitPrice, String producer, String description, String category, String releaseDate) {
         super(carId, name, unitPrice);
         this.producer = producer;
-        this.description = decscription;
+        this.description = description;
         this.category = category;
         this.releaseDate = releaseDate;
     }
     public String getCarId() {
-        return CarId();
+        return carId();
     }
 
     public void setCarId(String carId) {
-        this.carID = carId;
+        this.carId = carId;
     }
     public String getName() {
         return name;

@@ -5,7 +5,7 @@ public abstract class Item {
     String name;
     int unitPrice;
 
-    public item(String carId, String name, int unitPrice) {
+    public Item(String carId, String name, int unitPrice) {
         this.carId = carId;
         this.name = name;
         this.unitPrice = unitPrice;
