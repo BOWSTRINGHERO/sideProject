@@ -1,17 +1,16 @@
 package item;
 
-import java.awt.print.Book;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
 public class CarInit {
-    private static ArrayList<Book> mCarList;
+    private static ArrayList<Car> mCarList;
     private static int mTotalCar = 0;
 
     public static void init() {
         mTotalCar = totalFileToCarList();
-        mCarList = new ArrayList<Book>();
+        mCarList = new ArrayList<Car>();
         setFileToCarList(mCarList);
     }
 
@@ -35,7 +34,7 @@ public class CarInit {
         return 0;
     }
 
-    public static void setFileToCarList(ArrayList<Book> carList) {
+    public static void setFileToCarList(ArrayList<Car> carList) {
         try {
             FileReader fr = new FileReader("car.txt");
             BufferedReader reader = new BufferedReader(fr);
@@ -51,7 +50,8 @@ public class CarInit {
                     readCar[5] = reader.readLine();
                     readCar[6] = reader.readLine();
                 }
-                Book caritem = new Book(readCar[0], readCar[1], Integer.parseInt(readCar[2]), readCar[3], readCar[4], readCar[5], readCar[6]);
+                Car caritem = new Car(readCar[0], readCar[1], Integer.parseInt(readCar[2]), readCar[3], readCar[4], readCar[5], readCar[6]) {
+                };
                 carList.add(caritem);
             }
             reader.close();
@@ -61,11 +61,11 @@ public class CarInit {
         }
     }
 
-    public static ArrayList<Book> getmCarList() {
+    public static ArrayList<Car> getmCarList() {
         return mCarList;
     }
 
-    public static void setmCarList(ArrayList<Book> mCarList) {
+    public static void setmCarList(ArrayList<Car> mCarList) {
         CarInit.mCarList = mCarList;
     }
 

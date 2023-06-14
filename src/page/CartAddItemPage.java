@@ -1,6 +1,7 @@
 package page;
 
 import cart.Cart;
+import item.Car;
 import item.CarInit;
 
 import javax.swing.*;
@@ -46,12 +47,12 @@ public class CartAddItemPage extends JPanel {
         tablePanel.setBounds(300, 0, 700, 400);
         add(tablePanel);
 
-        ArrayList<Book> carlist = CarInit.getmCarList();
+        ArrayList<Car> carlist = CarInit.getmCarList();
         Object[] tableHeader = {"제품 ID", "제품명", "가격", "생산자", "제품설명", "분류", "출시일"};
         Object[][] content = new Object[carlist.size()][tableHeader.length];
 
         for (int i = 0; i < carlist.size(); i++) {
-            Book caritem = carlist.get(i);
+            Car caritem = carlist.get(i);
             content[i][0] = caritem.getCarId();
             content[i][1] = caritem.getName();
             content[i][2] = caritem.getUnitPrice();
@@ -120,7 +121,7 @@ public class CartAddItemPage extends JPanel {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ArrayList<Book> carlist = CarInit.getmCarList();
+                ArrayList<Car> carlist = CarInit.getmCarList();
                 int select = JOptionPane.showConfirmDialog(addButton, "장바구니에 추가하겠습니까?");
                 if (select == 0) {
                     int numId = mSelectRow;

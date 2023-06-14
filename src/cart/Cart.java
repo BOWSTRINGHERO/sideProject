@@ -11,9 +11,9 @@ public class Cart implements CartInterface {
     public Cart() {
     }
 
-    public void printCarList(ArrayList<Book> carlist) {
+    public void printCarList(ArrayList<Car> carlist) {
         for (int i = 0; i < carlist.size(); i++) {
-            Book caritem = carlist.get(i);
+            Car caritem = carlist.get(i);
             System.out.print(caritem.getCarId() + " | ");
             System.out.print(caritem.getName() + " | ");
             System.out.print(caritem.getUnitPrice() + " | ");
@@ -25,13 +25,13 @@ public class Cart implements CartInterface {
         }
     }
 
-    public void insertCar(Book car) {
+    public void insertCar(Car car) {
         CartItem caritem = new CartItem(car);
         mCartItem.add(caritem);
         mCartCount = mCartItem.size();
     }
 
-    public void deleteBook() {
+    public void deleteCar() {
         mCartItem.clear();
         mCartCount = 0;
     }

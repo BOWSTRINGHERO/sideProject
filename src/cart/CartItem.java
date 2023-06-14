@@ -1,9 +1,9 @@
 package cart;
 
-import java.awt.print.Book;
+import item.Car;
 
 public class CartItem {
-    private Book itemCar;
+    private Car itemCar;
     private String carID;
     private int quantity;
     private int totalPrice;
@@ -11,18 +11,18 @@ public class CartItem {
     public CartItem() {
     }
 
-    public CartItem(Book carlist) {
+    public CartItem(Car carlist) {
         this.itemCar = carlist;
-        this.carID = carlist.getCarID();
+        this.carID = carlist.getCarId();
         this.quantity = 1;
         updateTotalPrice();
     }
 
-    public Book getItemCar() {
+    public Car getItemCar() {
         return itemCar;
     }
 
-    public void setItemCar(Book itemCar) {
+    public void setItemCar(Car itemCar) {
         this.itemCar = itemCar;
     }
 

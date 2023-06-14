@@ -1,16 +1,17 @@
 package cart;
 
-import java.awt.print.Book;
+import item.Car;
+
 import java.util.ArrayList;
 
 public interface CartInterface {
-    void printCarList(ArrayList<Book> p);
+    void printCarList(ArrayList<Car> p);
 
     boolean isCartInCar(String id);
 
-    void insertCar(Book p);
+    void insertCar(Car p);
 
     void removeCart(int numId);
 
-    void deleteBook();
+    void deleteCar();
 }
