@@ -97,8 +97,9 @@ public class GuestWindow extends JFrame {
             }
         });
     }
-    // 임시 Test !!!
-    public static void main(String[] args) {
-         new GuestWindow("Test&Debugging", 0,0,1000,1000);
-    }
 }
+    // 임시 Test !!!
+//    public static void main(String[] args) {
+//         new GuestWindow("Test&Debugging", 0,0,1000,1000);
+//    }
+//}

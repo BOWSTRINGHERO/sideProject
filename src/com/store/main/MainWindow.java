@@ -1,5 +1,9 @@
 package com.store.main;
 
+import cart.Cart;
+import item.CarInit;
+import page.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
@@ -7,19 +11,10 @@ import java.awt.event.WindowEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-//import page.GuestInfoPage;
-//import cart.Cart;
-//import cart.CartItem.BookInIt;
-//import page.CartAddItemPage;
-//import page.CartItemListPage;
-//import page.CartShippingPage;
-//import page.AdminLoginDialog;
-//import page.AdminPage;
-
 // 버튼 Icon Image , 출력 메시지 , 버튼 Text 등은 다양하게 변경하도록 합니다.
 
 public class MainWindow extends JFrame {
-/*
+
     static Cart mCart;
     static JPanel mMenuPanel, mPagePanel;
     public MainWindow(String title, int x, int y, int width, int height) {
@@ -112,7 +107,7 @@ public class MainWindow extends JFrame {
         bt4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 mPagePanel.removeAll();
-                BookInIt.init();
+                CarInit.init();
                 mPagePanel.add(
                         "장바구니에 추가하기", new CartAddItemPage(mPagePanel, mCart));
                 mPagePanel.revalidate();
@@ -245,7 +240,7 @@ public class MainWindow extends JFrame {
         item02.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 mPagePanel.removeAll();
-                BookInIt.init();
+                CarInit.init();
                 mPagePanel.add(
                         "장바구니에 추가하기", new CartAddItemPage(mPagePanel, mCart));
                 add(mPagePanel);
@@ -269,11 +264,10 @@ public class MainWindow extends JFrame {
             int select = JOptionPane.showConfirmDialog(button,
                     "장바구니의 모든 항목을 삭제하겠습니까? ");
             if (select == 0) {
-                mCart.deleteBook();
+                mCart.deleteCar();
                 JOptionPane.showMessageDialog(button,
                         "장바구니의 모든 항목을 삭제했습니다");
             }
         }
     }
-*/
 }
