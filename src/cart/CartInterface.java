@@ -6,9 +6,9 @@ import java.util.ArrayList;
 public interface CartInterface {
     void printCarList(ArrayList<Book> p);
 
-    boolean isCartInBook(String id);
+    boolean isCartInCar(String id);
 
-    void insertBook(Book p);
+    void insertCar(Book p);
 
     void removeCart(int numId);
 

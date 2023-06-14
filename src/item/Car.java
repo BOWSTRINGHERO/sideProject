@@ -17,19 +17,23 @@ public abstract class Car extends Item {
         this.category = category;
         this.releaseDate = releaseDate;
     }
+
     public String getCarId() {
-        return carId();
+        return carId;
     }
 
     public void setCarId(String carId) {
         this.carId = carId;
     }
+
     public String getName() {
         return name;
     }
-    public void setName() {
-        this.return name;
+
+    public void setName(String name) {
+        this.name = name;
     }
+
     public int getUnitPrice() {
         return unitPrice;
     }

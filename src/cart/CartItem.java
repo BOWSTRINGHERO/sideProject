@@ -13,7 +13,7 @@ public class CartItem {
 
     public CartItem(Book carlist) {
         this.itemCar = carlist;
-        this.carID = carlist.getCarId();
+        this.carID = carlist.getCarID();
         this.quantity = 1;
         updateTotalPrice();
     }
