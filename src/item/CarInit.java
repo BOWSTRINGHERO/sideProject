@@ -51,7 +51,7 @@ public class CarInit {
                     readCar[5] = reader.readLine();
                     readCar[6] = reader.readLine();
                 }
-                Book caritem = new Book(readCar[0], readCar[1], readCar[2], readCar[3], readCar[4], readCar[5], readCar[6]);
+                Book caritem = new Book(readCar[0], readCar[1], Integer.parseInt(readCar[2]), readCar[3], readCar[4], readCar[5], readCar[6]);
                 carList.add(caritem);
             }
             reader.close();
