@@ -1,5 +1,7 @@
 package com.store.main;
 
+import member.UserInit;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -88,10 +90,9 @@ public class GuestWindow extends JFrame {
                 if (nameField.getText().isEmpty() || phoneField.getText().isEmpty())
                     JOptionPane.showMessageDialog(enterButton, message, "고객 정보", JOptionPane.ERROR_MESSAGE);
                 else {
-
-                    //UserInIt.init(nameField.getText(), Integer.parseInt(phoneField.getText())); // 입력한 고객 정보 저장
+                    UserInit.init(nameField.getText(), Integer.parseInt(phoneField.getText())); // 입력한 고객 정보 저장
                     dispose(); // 대화상자 닫기
-                    //new MainWindow("온라인 Store, 0, 0, 1000, 750);
+                    new MainWindow("온라인 Store", 0, 0, 1000, 750);
 // MainWindow 프레임 호출
                 }
             }

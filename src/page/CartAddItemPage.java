@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.print.Book;
 import java.util.ArrayList;
 
 public class CartAddItemPage extends JPanel {
@@ -33,10 +32,10 @@ public class CartAddItemPage extends JPanel {
 
         JPanel imagePanel = new JPanel();
         imagePanel.setBounds(20, 0, 300, 400);
-        imageCar = new ImageIcon("images/1.png");
-        imageCar = new ImageIcon("images/2.png");
-        imageCar = new ImageIcon("images/3.png");
-        imageCar = new ImageIcon("images/4.png");
+        imageCar = new ImageIcon("images/11.png");
+        imageCar = new ImageIcon("images/12.png");
+        imageCar = new ImageIcon("images/13.png");
+        imageCar = new ImageIcon("images/14.png");
 
         imageCar.setImage(imageCar.getImage().getScaledInstance(250, 300, Image.SCALE_DEFAULT));
         JLabel label = new JLabel(imageCar);

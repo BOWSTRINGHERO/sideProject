@@ -50,7 +50,7 @@ public class MainWindow extends JFrame {
         mCart = new Cart();
         Font ft;
         ft = new Font("함초롬돋움", Font.BOLD, 15);
-        JButton bt1 = new JButton("고객 정보 확인하기", new ImageIcon("./images/1.png"));
+        JButton bt1 = new JButton("고객 정보 확인하기", new ImageIcon("images/1.png"));
         bt1.setBounds(0, 0, 100, 50);
         bt1.setFont(ft);
         mMenuPanel.add(bt1);
@@ -63,7 +63,7 @@ public class MainWindow extends JFrame {
                 mPagePanel.repaint(); // 구성요소 모양을 변경하여 호출
             }
         });
-        JButton bt2 = new JButton("장바구니 상품목록보기", new ImageIcon("./images/2.png"));
+        JButton bt2 = new JButton("장바구니 상품목록보기", new ImageIcon("images/2.png"));
         bt2.setBounds(0, 0, 100, 30);
         bt2.setFont(ft);
         mMenuPanel.add(bt2);
@@ -81,7 +81,7 @@ public class MainWindow extends JFrame {
                 }
             }
         });
-        JButton bt3 = new JButton("장바구니 비우기", new ImageIcon("./images/3.png"));
+        JButton bt3 = new JButton("장바구니 비우기", new ImageIcon("images/3.png"));
         bt3.setBounds(0, 0, 100, 30);
         bt3.setFont(ft);
         mMenuPanel.add(bt3);
@@ -101,7 +101,7 @@ public class MainWindow extends JFrame {
             }
         });
         JButton bt4 = new JButton(
-                "장바구니에 항목추가하기", new ImageIcon("./images/4.png"));
+                "장바구니에 항목추가하기", new ImageIcon("images/4.png"));
         bt4.setFont(ft);
         mMenuPanel.add(bt4);
         bt4.addActionListener(new ActionListener() {
@@ -115,11 +115,11 @@ public class MainWindow extends JFrame {
             }
         });
         JButton bt5 = new JButton(
-                "장바구니 항목 수량 변경", new ImageIcon("./images/5.png"));
+                "장바구니 항목 수량 변경", new ImageIcon("images/5.png"));
         bt5.setFont(ft);
         mMenuPanel.add(bt5);
         JButton bt6 = new JButton(
-                "장바구니에 상품 삭제", new ImageIcon("./images/6.png"));
+                "장바구니에 상품 삭제", new ImageIcon("images/6.png"));
         bt6.setFont(ft);
         mMenuPanel.add(bt6);
         bt6.addActionListener(new ActionListener() {
@@ -149,7 +149,7 @@ public class MainWindow extends JFrame {
                 mPagePanel.repaint();
             }
         });
-        JButton bt7 = new JButton("주문하기", new ImageIcon("./images/7.png"));
+        JButton bt7 = new JButton("주문하기", new ImageIcon("images/7.png"));
         bt7.setFont(ft);
         mMenuPanel.add(bt7);
         bt7.addActionListener(new ActionListener() {
@@ -166,7 +166,7 @@ public class MainWindow extends JFrame {
                 }
             }
         });
-        JButton bt8 = new JButton("종료", new ImageIcon("./images/8.png"));
+        JButton bt8 = new JButton("종료", new ImageIcon("images/8.png"));
         bt8.setFont(ft);
         mMenuPanel.add(bt8);
         bt8.addActionListener(new ActionListener() {
@@ -178,7 +178,7 @@ public class MainWindow extends JFrame {
                 }
             }
         });
-        JButton bt9 = new JButton("관리자", new ImageIcon("./images/9.png"));
+        JButton bt9 = new JButton("관리자", new ImageIcon("images/9.png"));
         bt9.setFont(ft);
         mMenuPanel.add(bt9);
         bt9.addActionListener(new ActionListener() {
